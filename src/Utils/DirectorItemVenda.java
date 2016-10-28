@@ -3,13 +3,13 @@ package Utils;
 public class DirectorItemVenda {
 	private ProtoIV piv_ = null;
 	
-	public void initIV (PS v) {
-		piv_ = new ProtoIV(v);
+	public void initIV (PS v, int quantidade) {
+		piv_ = new ProtoIV(v, quantidade);
 	}
 	
-	public void addPS (PS v) {
+	public void addPS (PS v) throws NullPointerException {
 		if (piv_ == null)
-			initIV(v);
+			throw new NullPointerException();
 		
 		piv_.add(v);
 	}

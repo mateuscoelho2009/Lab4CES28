@@ -13,8 +13,8 @@ public class DirectorNotaFiscal {
 		directorIV_ = new DirectorItemVenda();
 	}
 	
-	public void newIV (PS prodserv) {
-		directorIV_.initIV(prodserv);
+	public void newIV (PS prodserv, int quantidade) {
+		directorIV_.initIV(prodserv, quantidade);
 	}
 	
 	public void addNodePS (PS v) {
