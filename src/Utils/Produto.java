@@ -1,8 +1,13 @@
 package Utils;
 
-public abstract class Produto extends PS {
-	String nome_;
-	float precoUnidade_;
-	String natureza_;
+public class Produto extends PS {
+	protected String nome_;
+	protected float precoUnidade_;
+	protected String natureza_;
 	// TODO: Categoria Tributária!!
+	
+	@Override
+	public String toString () {
+		return nome_ + ": " + natureza_ + " por " + precoUnidade_;
+	}
 }

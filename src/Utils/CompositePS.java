@@ -21,6 +21,23 @@ public class CompositePS extends PS {
 	// Função padrão de PS's
 	
 	
+	
+	public String hierarchy () {
+		String s = "";
+		
+		s += value_ + ":{\n";
+		
+		for (int i = 0; i < childPS_.size(); i ++) {
+			CompositePS atuComp = childPS_.get(i);
+			
+			s += atuComp.hierarchy() + "\n";
+		}
+		
+		s += "}";
+		
+		return s;
+	}
+	
 	public void add (PS nChild) {
 		if (atuConstructPS_ != null) {
 			atuConstructPS_.add(nChild);
