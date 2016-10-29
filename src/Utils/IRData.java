@@ -1,5 +1,8 @@
 package Utils;
 
+/*
+ * Classe responsável por carregar o histórico de impostos.
+ */
 public class IRData {
 	float sumTaxes = 0f;
 	
